@@ -1,0 +1,95 @@
+@mixin circle-orbit(
+  $no-of-items,
+  $circle-size,
+  $item-size,
+  $center-size
+) {
+  $half-item-size:   ($item-size / 2);
+  $half-circle-size: ($circle-size / 2);
+  $half-center-size: ($center-size / 2);
+
+  position: relative;
+  width:  $circle-size;
+  height: $circle-size;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  box-sizing: content-box;
+
+  > li { 
+    
+    display: block;
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    width:  $item-size;
+    height: $item-size;
+    margin: -$half-item-size;
+    background-color: #9FAC39;
+    border-radius: 50%;
+    text-align: center;
+    line-height: $item-size;
+      
+    //styling if an image is used for outer circles  
+    img {
+
+       width:  $item-size;
+       height: $item-size;
+       border-radius: 50%;
+      }    
+  }
+
+  > div {
+     display: block;
+     position: absolute;
+     top:  50%;
+     left: 0%;
+     width:  $center-size;
+     height: $center-size;
+     margin: -$half-center-size;
+     background-color: tomato;
+     border-radius: 50%;
+     text-align: center;
+     line-height: $center-size;
+      
+      //styling if an image is used for center circle
+      img {
+        display: block;
+        position: absolute;
+        top:  50%;
+        left: 50%;
+        width:  $center-size;
+        height: $center-size;
+        margin: -$half-center-size;
+        border-radius: 50%;
+
+        }
+}
+
+
+  $angle: (360 / $no-of-items);
+  $rotation: 0;
+
+  @for $i from 1 through $no-of-items {
+
+      > :nth-of-type(#{$i}) {
+          
+        /*Rotates the child elements by $angle( the axis of the elemt will be rotated) and move the element
+          along the rotated axis and rotates the item back to it's default position*/
+        transform: rotate($rotation * 1deg) translate($half-circle-size) rotate($rotation * -1deg);
+          
+      }
+    
+      //Keeping track of incremented angle
+    $rotation: ($rotation + $angle);
+  }
+}
+
+.circle-container {
+  @include circle-orbit(10, 20em, 5em, 12em);
+  margin: 10% auto ;
+
+
+
+
+}

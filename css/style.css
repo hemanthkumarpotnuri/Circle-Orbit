@@ -1,0 +1,86 @@
+.circle-container {
+  position: relative;
+  width: 20em;
+  height: 20em;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  box-sizing: content-box;
+  margin: 10% auto; }
+  .circle-container > li {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5em;
+    height: 5em;
+    margin: -2.5em;
+    background-color: #9FAC39;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 5em; }
+    .circle-container > li img {
+      width: 5em;
+      height: 5em;
+      border-radius: 50%; }
+  .circle-container > div {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 12em;
+    height: 12em;
+    margin: -6em;
+    background-color: tomato;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 12em; }
+    .circle-container > div img {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12em;
+      height: 12em;
+      margin: -6em;
+      border-radius: 50%; }
+  .circle-container > :nth-of-type(1) {
+    /*Rotates the child elements by $angle( the axis of the elemt will be rotated) and move the element
+          along the rotated axis and rotates the item back to it's default position*/
+    transform: rotate(0deg) translate(10em) rotate(0deg); }
+  .circle-container > :nth-of-type(2) {
+    /*Rotates the child elements by $angle( the axis of the elemt will be rotated) and move the element
+          along the rotated axis and rotates the item back to it's default position*/
+    transform: rotate(36deg) translate(10em) rotate(-36deg); }
+  .circle-container > :nth-of-type(3) {
+    /*Rotates the child elements by $angle( the axis of the elemt will be rotated) and move the element
+          along the rotated axis and rotates the item back to it's default position*/
+    transform: rotate(72deg) translate(10em) rotate(-72deg); }
+  .circle-container > :nth-of-type(4) {
+    /*Rotates the child elements by $angle( the axis of the elemt will be rotated) and move the element
+          along the rotated axis and rotates the item back to it's default position*/
+    transform: rotate(108deg) translate(10em) rotate(-108deg); }
+  .circle-container > :nth-of-type(5) {
+    /*Rotates the child elements by $angle( the axis of the elemt will be rotated) and move the element
+          along the rotated axis and rotates the item back to it's default position*/
+    transform: rotate(144deg) translate(10em) rotate(-144deg); }
+  .circle-container > :nth-of-type(6) {
+    /*Rotates the child elements by $angle( the axis of the elemt will be rotated) and move the element
+          along the rotated axis and rotates the item back to it's default position*/
+    transform: rotate(180deg) translate(10em) rotate(-180deg); }
+  .circle-container > :nth-of-type(7) {
+    /*Rotates the child elements by $angle( the axis of the elemt will be rotated) and move the element
+          along the rotated axis and rotates the item back to it's default position*/
+    transform: rotate(216deg) translate(10em) rotate(-216deg); }
+  .circle-container > :nth-of-type(8) {
+    /*Rotates the child elements by $angle( the axis of the elemt will be rotated) and move the element
+          along the rotated axis and rotates the item back to it's default position*/
+    transform: rotate(252deg) translate(10em) rotate(-252deg); }
+  .circle-container > :nth-of-type(9) {
+    /*Rotates the child elements by $angle( the axis of the elemt will be rotated) and move the element
+          along the rotated axis and rotates the item back to it's default position*/
+    transform: rotate(288deg) translate(10em) rotate(-288deg); }
+  .circle-container > :nth-of-type(10) {
+    /*Rotates the child elements by $angle( the axis of the elemt will be rotated) and move the element
+          along the rotated axis and rotates the item back to it's default position*/
+    transform: rotate(324deg) translate(10em) rotate(-324deg); }
