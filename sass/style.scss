@@ -16,8 +16,7 @@
   list-style: none;
   box-sizing: content-box;
 
-  > li { 
-    
+  > li {  
     display: block;
     position: absolute;
     top:  50%;
@@ -25,14 +24,14 @@
     width:  $item-size;
     height: $item-size;
     margin: -$half-item-size;
-    background-color: #9FAC39;
+    background-color: #000;
     border-radius: 50%;
     text-align: center;
     line-height: $item-size;
+    overflow: hidden;
       
     //styling if an image is used for outer circles  
     img {
-
        width:  $item-size;
        height: $item-size;
        border-radius: 50%;
@@ -47,22 +46,20 @@
      width:  $center-size;
      height: $center-size;
      margin: -$half-center-size;
-     background-color: tomato;
+     background-color: #000;
      border-radius: 50%;
      text-align: center;
      line-height: $center-size;
       
+      
       //styling if an image is used for center circle
       img {
-        display: block;
         position: absolute;
         top:  50%;
         left: 50%;
-        width:  $center-size;
-        height: $center-size;
+        width:  100%;
+        height: auto;
         margin: -$half-center-size;
-        border-radius: 50%;
-
         }
 }
 
@@ -88,8 +85,33 @@
 .circle-container {
   @include circle-orbit(10, 20em, 5em, 12em);
   margin: 10% auto ;
-
-
-
-
+    
+    
+  //additional styling
+    li {
+        img {
+            border-style: none;
+            opacity: 0.7;
+            transform: scale(1.15);
+            transition: transform 0.5s, opacity 0.5s;
+        }
+        
+        img:hover {
+            opacity: 1;
+            transform: scale(1.06);
+        }
+    }
+        
+    div {
+        img {
+            opacity: 0.7;
+            transform: scale(1.15);
+            transition: transform 0.5s, opacity 0.5s;   
+        }
+        
+        img:hover {
+            opacity: 1;
+            transform: scale(1.06);
+        }
+    }
 }

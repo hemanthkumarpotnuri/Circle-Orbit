@@ -15,10 +15,11 @@
     width: 5em;
     height: 5em;
     margin: -2.5em;
-    background-color: #9FAC39;
+    background-color: #000;
     border-radius: 50%;
     text-align: center;
-    line-height: 5em; }
+    line-height: 5em;
+    overflow: hidden; }
     .circle-container > li img {
       width: 5em;
       height: 5em;
@@ -31,19 +32,17 @@
     width: 12em;
     height: 12em;
     margin: -6em;
-    background-color: tomato;
+    background-color: #000;
     border-radius: 50%;
     text-align: center;
     line-height: 12em; }
     .circle-container > div img {
-      display: block;
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 12em;
-      height: 12em;
-      margin: -6em;
-      border-radius: 50%; }
+      width: 100%;
+      height: auto;
+      margin: -6em; }
   .circle-container > :nth-of-type(1) {
     /*Rotates the child elements by $angle( the axis of the elemt will be rotated) and move the element
           along the rotated axis and rotates the item back to it's default position*/
@@ -84,3 +83,18 @@
     /*Rotates the child elements by $angle( the axis of the elemt will be rotated) and move the element
           along the rotated axis and rotates the item back to it's default position*/
     transform: rotate(324deg) translate(10em) rotate(-324deg); }
+  .circle-container li img {
+    border-style: none;
+    opacity: 0.7;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s; }
+  .circle-container li img:hover {
+    opacity: 1;
+    transform: scale(1.06); }
+  .circle-container div img {
+    opacity: 0.7;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s; }
+  .circle-container div img:hover {
+    opacity: 1;
+    transform: scale(1.06); }
