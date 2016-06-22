@@ -1,0 +1,15 @@
+{
+  "name": "circle-menu",
+  "version": "1.0.0",
+  "description": "circle menu in a dail fashion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hemanth Potnuri",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
